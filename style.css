@@ -17,6 +17,7 @@ html {
 body {
 	font-family: Ruda, sans-serif;
 	background-color: #242427;
+	color: #fff;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -34,3 +35,35 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
+/*Header*/
+
+.header {
+	margin-block: 36px;
+	margin-inline: 130px 103px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: Roboto, sans-serif;
+}
+
+.logo {
+	padding-left: 8px;
+	border-left: 1px solid #D95583;
+}
+
+.logo__title {
+	font-size: 24px;
+}
+
+.logo__text {
+	font-size: 17px;
+}
+
+.menu {
+	display: flex;
+	column-gap: 90px;
+	font-size: 18px;
+}
+
+.menu__item {}
