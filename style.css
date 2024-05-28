@@ -11,10 +11,10 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
+	box-sizing: border-box;
 }
 
 html {
-	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
 
@@ -44,11 +44,12 @@ a {
 
 .header {
 	margin-block: 36px;
-	margin-inline: clamp(30px, 130vw * var(--vw), 160px) clamp(30px, 103vw * var(--vw), 133px);
+	padding-inline: clamp(30px, 130vw * var(--vw), 160px) clamp(30px, 103vw * var(--vw), 133px);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	font-family: Roboto, sans-serif;
+	z-index: 1;
 }
 
 .logo {
@@ -66,7 +67,7 @@ a {
 
 .menu {
 	display: flex;
-	column-gap: clamp(30px, 90vw * var(--vw), 105px);
+	column-gap: clamp(30px, 115vw * var(--vw), 125px);
 	font-size: 1,125rem;
 }
 
@@ -84,4 +85,54 @@ a {
 .menu__item:hover {
 	color: #F2CC07;
 	box-shadow: 0 0 9px 3px;
+}
+
+/*Preview*/
+
+.preview {
+	position: relative;
+	display: flex;
+	padding-left: 127px;
+	padding-block: 205px 280px;
+	font-family: Roboto, sans-serif;
+}
+
+.preview__title {
+	margin-bottom: 102px;
+	font-weight: 700;
+	font-size: 48px;
+	background: linear-gradient(143.50deg, rgb(0, 58, 206), rgb(206, 0, 148));
+	-webkit-background-clip:
+		text;
+	-webkit-text-fill-color:
+		transparent;
+	background-clip:
+		text;
+}
+
+.preview__btn {
+	width: 200px;
+	padding-block: 19px 18px;
+	font-weight: 200;
+	font-size: 20px;
+	color: #fff;
+	background: linear-gradient(135.00deg, rgb(83, 73, 143) 0%, rgb(217, 85, 131) 100%);
+}
+
+.preview__pic {
+	position: absolute;
+	top: -17%;
+	left: 23%;
+}
+
+.right-side {
+	position: absolute;
+	top: -7%;
+	right: -10%;
+}
+
+.preview__number {
+	font-weight: 200;
+	font-size: 490px;
+	color: rgba(132, 132, 132, 0.5);
 }
