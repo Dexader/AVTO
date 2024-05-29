@@ -19,6 +19,7 @@ html {
 }
 
 body {
+	overflow: hidden;
 	font-family: Ruda, sans-serif;
 	background-color: #242427;
 	color: #fff;
@@ -43,13 +44,15 @@ a {
 /*Header*/
 
 .header {
+	position: fixed;
+	width: 100%;
 	margin-block: 36px;
 	padding-inline: clamp(30px, 130vw * var(--vw), 160px) clamp(30px, 103vw * var(--vw), 133px);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	font-family: Roboto, sans-serif;
-	z-index: 1;
+	z-index: 100;
 }
 
 .logo {
@@ -92,8 +95,8 @@ a {
 .preview {
 	position: relative;
 	display: flex;
-	padding-left: 127px;
-	padding-block: 205px 280px;
+	padding-left: clamp(30px, 127vw * var(--vw), 132px);
+	padding-block: 294px 280px;
 	font-family: Roboto, sans-serif;
 }
 
@@ -121,18 +124,43 @@ a {
 
 .preview__pic {
 	position: absolute;
-	top: -17%;
+	top: 0;
 	left: 23%;
+	z-index: 2;
 }
 
 .right-side {
 	position: absolute;
-	top: -7%;
+	top: 9%;
 	right: -10%;
+	z-index: -1;
 }
 
 .preview__number {
 	font-weight: 200;
-	font-size: 490px;
+	font-size: clamp(350px, 490vw * var(--vw), 500px);
 	color: rgba(132, 132, 132, 0.5);
+}
+
+@media (max-width: 990.98px){
+
+	.preview {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-block: 0;
+	}
+
+	.preview__left-side {
+		order: 2;
+	}
+
+	.preview__bg {
+		order: 1;
+	}
+	
+	.preview__pic {
+		position: static;
+	}
+
 }
