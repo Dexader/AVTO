@@ -72,6 +72,7 @@ a {
 	display: flex;
 	column-gap: clamp(30px, 115vw * var(--vw), 125px);
 	font-size: 1,125rem;
+	background-color: rgba(36, 36, 39, 0.5);
 }
 
 @media (max-width: 474.98px){
@@ -239,4 +240,23 @@ a {
 		text-align: center;
 	}
 
+}
+
+/*Footer*/
+
+.footer {
+	padding-block: 120px 52px;
+	background: linear-gradient(180.00deg, rgb(36, 36, 39), rgba(103, 103, 103, 1) 100%);
+	text-align: center;
+}
+
+.footer__info {
+	font-weight: 600;
+	font-size: 15px;
+	margin-bottom: 49px;
+	line-height: 2;
+}
+
+.footer__link:not(:last-child) {
+	margin-right: 45px;
 }
